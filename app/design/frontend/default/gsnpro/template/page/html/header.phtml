@@ -1,0 +1,105 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="quick-access-container show-for-medium-up">
+    <div class="row">
+        <div class="columns quick-access">
+            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+            <?php echo $this->getChildHtml('topLinks') ?>
+            <?php echo $this->getChildHtml('store_language') ?>
+        </div>
+    </div>
+</div>
+<div class="header-container">
+    <div class="row collapse">
+        <header class="header medium-12 columns">            
+            <div class="row collapse">
+                <div class="medium-9 columns">
+                    <section class="menu-btn">
+                        <a class="left-off-canvas-toggle"><i class="fa fa-bars"></i></a>
+                    </section>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                    <div class="header-nav show-for-medium-up">
+                        <?php echo $this->getChildHtml('topMenu') ?>
+                    </div>
+                </div>
+                <div class="medium-3 columns">
+                    <div class="chunky-nav show-for-medium-up">
+                        <ul class="chunky-nav--panel">
+                            <li class="cart">
+                                <a href="<?php echo $this->getUrl('') ?>checkout/cart/"><i class="fa fa-shopping-cart"></i> <span>Cart</span></a>
+                            </li>
+                            <!--<li class="account">
+                                <a href="<?php echo $this->getUrl('') ?>customer/account/"><i class="fa fa-user"></i> <span>My Account</span></a>
+                            </li>-->
+                        </ul>
+                        <div class="header-search show-for-medium-up">
+                            <div class="btn-search"><a href="#search"><i class="fa fa-search"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php echo $this->getChildHtml('topContainer'); ?>
+        </header>
+    </div>
+</div>
+
+<div class="header-search-form">
+    <div class="row collapse">
+        <div class="medium-6 medium-push-6 columns">
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+    </div>
+</div>
+
+<aside id="nav-mobile" class="nav-mobile left-off-canvas-menu">
+    <div id="sml-nav-level0" class="nav-level nav-level0">
+        <div class="nav"></div>
+        <div class="nav-more">
+            <ul></ul>
+        </div>        
+    </div>
+    <div id="sml-nav-level1" class="nav-level nav-level1">
+        <div class="nav-back">
+            <ul>
+                <li data-nav-level="top"><a href="#">Main menu</a></li>
+            </ul>
+        </div>
+        <ul class="menu"></ul>
+    </div>
+    <div id="sml-nav-level2" class="nav-level nav-level2">
+        <div class="nav-back">
+            <ul>
+                <li data-nav-level="top"><a href="#">Main menu</a></li>
+                <li data-nav-level="level1"><a class="nav-back-level1" href="#">Main menu</a></li>
+            </ul>
+        </div>
+        <ul class="menu"></ul>
+    </div>
+</aside>

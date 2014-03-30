@@ -1,0 +1,58 @@
+.block {
+    margin-bottom: rem-calc(20);
+    color: rgba(white, 0.7);
+    
+    .block-title {
+        background: #151515;
+        padding: rem-calc(15);
+        color: white;
+        text-transform: uppercase;
+        font-size: rem-calc(20);
+    }
+    
+    .block-content {
+        padding: rem-calc(15);
+        
+        a {
+            color: white;
+            
+            &:hover {
+                color: #dcb303;
+            }
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+            margin: 0;
+        }
+        
+        label {
+            color: rgba(white, 0.7);
+        }
+        
+        
+    }
+    
+    &.block-layered-nav {
+        .block-content {
+            padding: 0;
+        }
+        
+        dt {
+            background : #2b2b2b;
+            padding: rem-calc(7 15);
+            color: white;
+            text-transform: uppercase;
+            font-size: rem-calc(16);
+        }
+        
+        dd {
+            padding: rem-calc(15);
+            
+            li {
+                color: #575757;
+            }
+        }
+    }
+}

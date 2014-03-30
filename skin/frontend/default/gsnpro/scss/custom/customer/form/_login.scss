@@ -1,0 +1,25 @@
+.account-login {
+    
+    .registered-users .f-left {
+        display: table;
+        font-size: rem-calc(12);
+        font-weight: bold;
+        padding-bottom: rem-calc(12);
+    }
+}
+
+.form-list {
+    
+    label.required em {
+        margin-right: 5px;
+        color: red;
+    }
+}
+
+.control {
+    @include clearfix;
+    
+    .input-box {
+        float: left;
+    }
+}

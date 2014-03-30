@@ -1,0 +1,19 @@
+.breadcrumbs {
+    margin-bottom: rem-calc(20);
+    
+    a {
+        color: $body-font-color;
+    }
+    
+    ul {
+        @include clearfix;
+        
+        list-style: none;
+        margin: 0;
+        
+        li {
+            float: left;
+            margin-right: rem-calc(5);
+        }
+    }
+}

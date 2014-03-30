@@ -1,0 +1,132 @@
+.toolbar {
+    border-bottom: #121212 2px solid;
+    margin-bottom: rem-calc(30);
+}
+
+.toolbar-bottom {
+    border-top: #121212 2px solid;
+    margin-top: rem-calc(30);
+    padding-top: rem-calc(20);
+}
+
+.pager {
+    @include clearfix;
+    
+    margin-bottom: rem-calc(15);
+    
+    .amount {
+        float: left;
+        margin: 0;
+    }
+    
+    .limiter {
+        float: right;
+        
+        label, select {
+            float: left;
+        }
+        
+        label {
+            padding: rem-calc(12);
+        }
+        
+        select {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.sorter {
+    display: none;
+    
+    .view-mode {
+        // Maybe remove this from the HTML rather than use CSS
+        display: none;
+    }
+    
+    .sort-by {
+        @include clearfix;
+        
+        label, select {
+            float: left;
+        }
+        
+        label {
+            padding: rem-calc(12);
+        }
+        
+        select {
+            width: auto;
+        }
+    }
+}
+
+.category-products {
+    
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    
+    .product-name {
+        font-size: rem-calc(20);
+        
+        a {
+            color: $body-font-color;
+        }
+    }
+    
+    .products-grid {
+        @include clearfix;
+        
+        > li {
+            margin-bottom: rem-calc(20);
+            padding-bottom: rem-calc(10);
+            
+            @media #{$medium-up} {
+                border-right: 1px solid #121212;
+                float: left;
+                width: 33.3%;
+                padding-right: rem-calc(10);
+                padding-left: rem-calc(10);
+                text-align: center;
+                
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    
+        .product-image {
+            float: left;
+            width: 110px;
+            margin-right: rem-calc(10);
+            display: inline-block;
+            
+            @media #{$medium-up} {
+                float: none;
+                width: auto;
+                margin: 0;
+                margin-bottom: rem-calc(15);
+            }
+        }
+    
+        .product-shop {
+            overflow: hidden;
+        }
+
+        .minimal-price-link {
+            display: none;
+        }
+    }
+}
+
+.price-box {
+    margin-bottom: rem-calc(20);
+
+    .price {
+        font-size: rem-calc(26);
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,147 @@
+.cart {
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    
+    fieldset {
+        padding: 0;
+        border: none;
+    }
+    
+    .totals {
+        background: #3a3a3a;
+        
+        table {
+            width: 100%;
+            background: none;
+            border: none;
+            
+            tr td {
+                color: #fff;
+            }
+            
+            tr {
+                border-bottom: 1px solid #2b2b2b;
+            }
+            
+            tfoot {
+                background: none;
+                
+                tr td {
+                    color: #fff;
+                }
+            }
+        }
+        
+        .checkout-types {
+            padding: rem-calc(15);
+            text-align: center;
+            
+            a {
+                color: #7f7f7f;
+            }
+        }
+    }
+    
+    .discount-form {
+        .input-box input {
+            @extend input[type="text"];
+        }
+    }
+}
+
+.cart-table {
+    width: 100%;
+    
+    @media only screen and (max-width: 64.063em) {
+        position: relative;
+        padding-bottom: 200px;
+        display: block;
+        
+        thead,
+        colgroup,
+        thead,
+        colgroup {
+            display: none;
+        }
+        
+        tfoot {
+            width: 100%;
+            display: block;
+        }
+        
+        td,
+        tr,
+        tbody,
+        td,
+        tr,
+        tbody {
+            display: block;
+            text-align: center !important;
+        }
+        
+        td {
+            margin: 0 10px;
+            border: 0;
+            border-bottom: 1px solid #2b2b2b;
+        }
+        
+        td:last-child {
+            border: 0;
+        }
+        
+        tr {
+            margin: 4px 0 25px;
+            /*border: 1px solid #e9e9e9;*/
+        }
+        
+        tfoot {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        tfoot button.button {
+            margin: 3px auto;
+            min-width: 55%;
+        }
+    }
+    
+    @media only screen and (max-width: 40.063em) {
+        
+        tfoot button.button {
+            width: 100%;
+        }
+    }
+    
+    h2 {
+        font-size: rem-calc(16);
+    }
+    
+    tfoot button.button {
+        margin-top: rem-calc(3);
+        margin-bottom: 0;
+    }
+}
+
+input.qty {
+    @extend input[type="text"];
+    
+    text-align: center;
+    width: 40px;
+    margin: 0 auto;
+}
+
+.block-cart {
+    .product-image {
+        float: left;
+        width: rem-calc(90);
+        background: white;
+        margin-right: rem-calc(10);
+        
+        img {
+            width: 100%;
+        }
+    }
+}

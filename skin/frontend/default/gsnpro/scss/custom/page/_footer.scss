@@ -1,0 +1,54 @@
+.footer-container {
+    background: #111;
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+    margin-bottom: rem-calc(40);
+}
+
+.footer {
+    color: rgba(white, 0.7);
+    
+    hr {
+        border-color: #262626;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    
+    h4 {
+        color: rgba(white, 0.5);
+        text-transform: uppercase;
+        font-size: rem-calc(16);
+    }
+    
+    a {
+        color: white;
+        
+        &:hover {
+            color: #dcb303;
+        }
+    }
+    
+    .footer-col {
+        margin-bottom: rem-calc(20);
+    }
+    
+    .contacts-content {
+        line-height: 1.6;
+    }
+    
+    address {
+        text-align: center;
+        font-style: normal;
+    }
+}
+
+.socials {
+    margin-top: rem-calc(5);
+    
+    i {
+        font-size: rem-calc(30);
+    }
+}

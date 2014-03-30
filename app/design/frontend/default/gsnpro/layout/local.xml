@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<layout>
+    <default>
+ 
+        <!-- Remove callouts and rarely used stuff -->
+        <remove name="right.poll"/>
+        <remove name="right.permanent.callout"/>
+        <remove name="left.permanent.callout"/>
+        <remove name="paypal.partner.right.logo"/>
+ 
+        <!-- add the local stylesheet and JS -->
+        <reference name="head">
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+            <action method="addCss"><stylesheet>css/application.css</stylesheet></action>
+            
+            <!-- Modernizr -->
+            <action method="addItem"><type>skin_js</type><name>js/vendor/modernizr-2.6.2.min.js</name><params/></action>
+            
+            <!-- Add this to footer -->
+            <action method="addItem"><type>skin_js</type><name>js/vendor/jquery-2.1.0.min.js</name><params/></action>
+            <action method="addItem"><type>skin_js</type><name>js/min/application.min.js</name><params/></action>
+        </reference>
+        
+        <remove name="catalog.compare.sidebar"/>
+        <remove name="right.reports.product.compared"/>
+ 
+    </default>
+</layout>
