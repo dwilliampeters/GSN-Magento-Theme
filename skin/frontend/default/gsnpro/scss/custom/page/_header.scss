@@ -1,7 +1,7 @@
 .header-container {
     background: #111;
     height: rem-calc(65);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .logo {
@@ -104,6 +104,7 @@
 }
 
 .chunky-nav {
+    float: right;  
     color: #555;
     
     .chunky-nav--panel {
@@ -246,6 +247,7 @@
     height: rem-calc(65);
     overflow: hidden;
     padding-left: rem-calc(20);
+    float: left;
     
     ul {
         @include clearfix;
@@ -269,10 +271,48 @@
                 color: #dcb303;
             }
         }
-        
-        ul {
-            display: none;
+    }
+    .nav-container {
+        > ul {
+            > li {
+                &.open {
+
+                    > ul {
+                        display: block;
+                    }
+                }
+                > ul {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    z-index: 9;
+                    background: #2b2b2b;
+                    display: none;
+                  
+                    > li {
+                        width: 20%;
+                        float: left;
+                        
+                        > a {
+                          line-height: rem-calc(50);
+                        }
+                        
+                        > ul {
+                            
+                            > li {
+                              
+                                a {
+                                    font-size: rem-calc(16);
+                                    line-height: rem-calc(45);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+          
     }
 }
 

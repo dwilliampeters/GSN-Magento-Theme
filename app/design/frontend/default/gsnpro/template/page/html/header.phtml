@@ -40,16 +40,15 @@
     <div class="row collapse">
         <header class="header medium-12 columns">            
             <div class="row collapse">
-                <div class="medium-9 columns">
+                <div class="small-12 columns">
                     <section class="menu-btn">
-                        <a class="left-off-canvas-toggle"><i class="fa fa-bars"></i></a>
+                      <a class="left-off-canvas-toggle show-for-small"><i class="fa fa-bars"></i></a>  
+                      <a class="left-off-canvas-toggle show-for-medium-up"><i class="fa fa-bars"></i></a>
                     </section>
                     <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
                     <div class="header-nav show-for-medium-up">
                         <?php echo $this->getChildHtml('topMenu') ?>
                     </div>
-                </div>
-                <div class="medium-3 columns">
                     <div class="chunky-nav show-for-medium-up">
                         <ul class="chunky-nav--panel">
                             <li class="cart">

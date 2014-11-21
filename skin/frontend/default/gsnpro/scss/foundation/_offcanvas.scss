@@ -23,6 +23,7 @@ $tabbar-header-margin: 0 !default;
 
 // Off Canvas Menu Variables
 $off-canvas-width: 85% !default;
+$off-canvas-large-width: 250px !default;
 $off-canvas-bg: #333 !default;
 
 // Off Canvas Menu List Variables
@@ -79,6 +80,9 @@ $menu-slide: "transform 500ms ease" !default;
 // basic styles for off-canvas menu container
 @mixin off-canvas-menu {
   width: $off-canvas-width;
+  @media #{$medium-up} {
+    width: $off-canvas-large-width;
+  }
   top:0;
   bottom:0;
   height: 100%;
@@ -234,7 +238,7 @@ $menu-slide: "transform 500ms ease" !default;
     // fill the screen
     display: block;
     position: absolute;
-    background: $off-canvas-overlay-background;
+    /*background: $off-canvas-overlay-background;*/
     top: 0;
     bottom: 0;
     left:0;
@@ -242,11 +246,11 @@ $menu-slide: "transform 500ms ease" !default;
     z-index: 1002;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    @media #{$medium-up} {
+   /* @media #{$medium-up} {
       &:hover {
         background: $off-canvas-overlay-background-hover;
       }
-    }
+    }*/
 }
 
 // OFF CANVAS MENUS
@@ -339,6 +343,9 @@ $menu-slide: "transform 500ms ease" !default;
   .move-right {
     > .inner-wrap {
       @include translate3d($off-canvas-width,0,0);
+      @media #{$medium-up} {
+        @include translate3d($off-canvas-large-width,0,0);
+      }
     }
     a.exit-off-canvas { @include back-link;}
   }
@@ -346,10 +353,9 @@ $menu-slide: "transform 500ms ease" !default;
   .move-left {
     > .inner-wrap {
       @include translate3d(-($off-canvas-width),0,0);
-      @media #{$large-up} {
-        @include translate3d(-(30%),0,0);
+      @media #{$medium-up} {
+        @include translate3d(-($off-canvas-large-width),0,0);
       }
-
     }
     a.exit-off-canvas { @include back-link; }
   }
@@ -359,8 +365,18 @@ $menu-slide: "transform 500ms ease" !default;
     .left-off-canvas-menu { @include translate2d(-100%, 0); }
     .right-off-canvas-menu { @include translate2d(100%, 0); }
 
-    .move-left > .inner-wrap { @include translate2d(-($off-canvas-width),0); }
-    .move-right > .inner-wrap { @include translate2d($off-canvas-width,0); }
+    .move-left > .inner-wrap {
+      @include translate2d(-($off-canvas-width),0);
+      @media #{$medium-up} {
+        @include translate2d(-($off-canvas-large-width),0);
+      }
+    }
+    .move-right > .inner-wrap {
+      @include translate2d($off-canvas-width,0);
+      @media #{$medium-up} {
+        @include translate2d($off-canvas-large-width,0);
+      }
+    }
   }
 
   // Older browsers
